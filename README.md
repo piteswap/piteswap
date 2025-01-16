@@ -1,5 +1,4 @@
-服务器系统CentOS 7.6  安装宝塔 （请勿用官方宝塔）
-破解版宝塔：https://www.hostcli.com/
+服务器系统CentOS 7.6  
 
 nginx php7.2 mysql5.7 安装php扩展  fileinfo opcache redis imagemagick imap  intl  xsl Swoole4并且禁用所有函数
 
