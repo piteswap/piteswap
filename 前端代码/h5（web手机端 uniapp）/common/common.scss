@@ -1,0 +1,97 @@
+/* #ifndef APP-NVUE */
+view,
+text {
+	box-sizing: border-box;
+}
+/* #endif */
+.status-bar {
+    height: 0;
+}
+.light .navbar-light, .light {
+    background: #fff!important;
+    color: #202020!important;
+}
+
+/*底部tabbar*/
+.u-tabbar__content{box-shadow:0 0 8rpx 0 rgba(27, 43, 64, 0.2) !important;}
+.u-tabbar__content__item__button{/*top:10rpx !important;*/}
+/* #ifndef APP-PLUS */
+.u-tabbar__content__item__text{bottom:12rpx !important; font-size: 26rpx !important;}
+/* #endif */
+/* #ifdef APP-PLUS */
+.u-tabbar__content__item__text{/*bottom:8rpx !important;*/ font-size: 24rpx !important;}
+/* #endif */
+
+/*通用设置面板项目*/
+.setting-item{
+	.u-cell-title{color: var(--text-color) !important;padding: 24rpx !important;font-size: 26rpx !important;}
+	.u-cell-item-box{
+		background-color: var(--kline-background) !important;
+		.u-cell{
+			color:var(--text-color); 
+			font-weight: 700;
+			padding: 22rpx 30rpx;
+			.u-cell_title{ font-size: 24rpx;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+			.u-cell__value{font-weight: 700 !important;font-size: 24rpx !important; color:#ffffff;}
+		}
+		.u-cell::after{border-color: var(--border-color);}
+		.u-cell-hover{background-color: var(--page-background-color) !important; opacity:0.9;}
+	}
+}
+
+.darkStyle{
+	/*顶部导航条*/
+	.u-navbar{ 
+		background-color: var(--page-background-color) !important;
+		box-shadow: 0 2px 2px 0 rgba(10,16,23,.4);
+		.u-icon__icon{
+			color: var(--text-color) !important;
+		}
+		.u-title{
+			color: #fff!important;
+		}
+	}
+}
+
+.dark .bg-theme {
+    background-color: #18171a !important;
+    color: var(--text-color) !important;
+}
+
+
+/*u-modal提示框*/
+.dark .u-mode-center-box{
+	background-color: var(--popup-background) !important;
+	.u-model{
+		background-color:var(--page-background-color) !important;
+		.u-model__title{
+			color:#fff !important;
+		}
+		.u-model__footer__button{
+			color:var(--text-color) !important;
+			&.u-model__btn--hover{
+				background-color:var(--popup-background) !important;
+			}
+			&.hairline-left{
+				color:var(--brand-color) !important;
+			}
+		}
+		.u-border-bottom:after, 
+		.u-border-left:after, 
+		.u-border-right:after, 
+		.u-border-top-bottom:after, 
+		.u-border-top:after, 
+		.u-border:after{
+			border-color:var(--text-color) !important;
+		}
+	}
+}
+
+
+/*K线提示*/
+.tipsboxlw{ 
+	display: flex; flex-direction: column;min-width:150px;
+	.row{
+		display: flex; align-items: center; justify-content: space-between;
+	}
+}

@@ -1,0 +1,508 @@
+{
+	"pages": [
+		{
+            "path" : "pages/index/index",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "Pite swap",
+                "enablePullDownRefresh": true
+            }
+            
+        }
+        ,{
+            "path" : "pages/settings/language/language",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "Pite swap",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/trade/index",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "Pite swap",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/user/login/login",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "Pite swap",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/user/login/register",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "Pite swap",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/user/login/choose",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/settings/account/index",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "Pite swap",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/notice/index",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "NOTICE",
+                "enablePullDownRefresh": true
+            }
+            
+        }
+		,{
+		    "path" : "pages/publication/index",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "PUBLICATION",
+		        "enablePullDownRefresh": false
+		    }
+		    
+		}
+		,{
+		    "path" : "pages/publication/details",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "PUBLICATION_DETAILS",
+		        "enablePullDownRefresh": false
+		    }
+		    
+		}
+		,{
+		    "path" : "pages/publication/purchase",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "PURCHASE",
+		        "enablePullDownRefresh": false
+		    }
+		    
+		}
+        ,{
+            "path" : "pages/settings/index",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/trade/kline",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "kline",
+                "enablePullDownRefresh": false				
+            }
+            
+        }
+        ,{
+            "path" : "pages/option/detail",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "Pite swap",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/assets/index",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "Pite swap",
+                "enablePullDownRefresh": true
+            }
+            
+        }
+        ,{
+            "path" : "pages/template/index",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "Pite swap",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/verification/index",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "Pite swap",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/verification/basic",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "Pite swap",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/assets/tradeAccount",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "Pite swap",
+                "enablePullDownRefresh": true
+            }
+            
+        }
+        ,{
+            "path" : "pages/assets/transfer/index",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "Deposit",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/assets/transfer/record",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "Pite swap",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/assets/deposit/index",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "Pite swap",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/assets/deposit/charge",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "Pite swap",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/assets/withdraw/index",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/assets/withdraw/detail",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/user/address/address",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "Pite swap",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/user/address/create",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "Pite swap",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/user/address/index",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "Pite swap",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/settings/security/index",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "Pite swap",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/settings/security/changePassword",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "Pite swap",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/finance/index",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "Pite swap",
+                "enablePullDownRefresh": true
+            }
+            
+        }
+        ,{
+            "path" : "pages/finance/buyPage",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "Pite swap",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/finance/ordersPage",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "Pite swap",
+                "enablePullDownRefresh": true
+            }
+            
+        }
+        ,{
+            "path" : "pages/finance/rulePage",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "Pite swap",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/promotion/index",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "Pite swap",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/help/center/center",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "Help",
+                "enablePullDownRefresh": true
+            }
+            
+        }
+        ,{
+            "path" : "pages/help/center/chat",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "Pite swap",
+                "enablePullDownRefresh": false,
+				"navigationBarBackgroundColor":"#2a405c",
+				"navigationBarTextStyle": "white",
+				"navigationStyle":"default",
+				"backgroundColor": "#1b2c42",
+				"backgroundColorTop": "#1b2c42",
+				"backgroundColorBottom": "#1b2c42",
+				"background": "#1b2c42",
+				"app-plus": {
+					"background": "#1b2c42",
+				    "bounceBackground": "#1b2c42",
+					"backgroundColor": "#1b2c42",
+					"backgroundColorTop": "#1b2c42",
+					"backgroundColorBottom": "#1b2c42",
+					"animationAlphaBGColor": "##1b2c42",
+					"animationType": "slide-in-right"
+				}
+            }
+            
+        }
+        ,{
+            "path" : "pages/help/center/detail",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "Pite swap",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/verification/advanced",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "Pite swap",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/assets/record",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "Pite swap",
+                "enablePullDownRefresh": true
+            }
+            
+        }
+        ,{
+            "path" : "pages/lever/index",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "Pite swap",
+                "enablePullDownRefresh": false,
+				"backgroundColor": "#1b2c42",
+				"backgroundColorTop": "#1b2c42",
+				"backgroundColorBottom": "#1b2c42",
+				"background": "#1b2c42"
+            }
+            
+        }
+        ,{
+            "path" : "pages/settings/security/changePayPassword",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "Pite swap",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/user/login/forgetPassword",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "Pite swap",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/index/notice/notice",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "Pite swap",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+		,{
+		    "path" : "pages/bankbind/index",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "Pite swap",
+		        "enablePullDownRefresh": false
+		    }
+		    
+		}
+		,{
+		    "path" : "pages/bankbind/addbank",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "Pite swap",
+		        "enablePullDownRefresh": false
+		    }
+		    
+		}
+        ,{
+            "path" : "pages/assets/withdraw/bank/bank",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "Pite swap",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
+	"tabBar": {
+	    "color": "#768da9",
+	    "selectedColor": "#2befbc",
+	    "borderStyle": "black",
+	    "backgroundColor": "#2a405c",
+	    "list": [
+			{
+				"iconPath": "/static/images/tabbar/tabbar-home-dark.png",
+				"selectedIconPath": "/static/images/tabbar/tabbar-home-select-dark.png",
+				"text": "首页",
+				"pagePath":"pages/index/index"
+			},
+			{
+				"iconPath": "/static/images/tabbar/tabbar-trade-dark.png",
+				"selectedIconPath": "/static/images/tabbar/tabbar-trade-select-dark.png",
+				"text": "币币",
+				"pagePath":"pages/trade/index"
+			},
+			{
+				"iconPath": "/static/images/tabbar/tabbar-option-dark.png",
+				"selectedIconPath": "/static/images/tabbar/tabbar-option-select-dark.png",
+				"text": "合约",
+				"pagePath":"pages/option/detail"
+			},
+			{
+				"iconPath": "/static/images/tabbar/tabbar-finance-dark.png",
+				"selectedIconPath": "/static/images/tabbar/tabbar-finance-select-dark.png",
+				"text": "理财",
+				"pagePath":"pages/template/index"
+			},
+			{
+				"iconPath": "/static/images/tabbar/tabbar-assets-dark.png",
+				"selectedIconPath": "/static/images/tabbar/tabbar-assets-select-dark.png",
+				"text": "资产",
+				"pagePath":"pages/assets/index"
+			}
+		]
+	},
+	"easycom": {
+		"^u-(.*)": "uview-ui/components/u-$1/u-$1.vue"
+	},
+	"globalStyle": {
+		"navigationBarTitleText": "Pite swap",
+		"navigationBarBackgroundColor":"#2a405c",
+		"navigationBarTextStyle": "white",
+		"navigationStyle":"custom",
+		"backgroundColor": "#1b2c42",
+		"backgroundColorTop": "#1b2c42",
+		"backgroundColorBottom": "#1b2c42",
+		"background": "#1b2c42",
+		"app-plus": {
+			"background": "#1b2c42",
+            "bounceBackground": "#1b2c42",
+			"backgroundColor": "#1b2c42",
+			"backgroundColorTop": "#1b2c42",
+			"backgroundColorBottom": "#1b2c42",
+			"animationAlphaBGColor": "##1b2c42",
+			"animationType": "slide-in-right",
+			"bounce":"none"
+		}
+	}
+}

@@ -1,0 +1,54 @@
+<template>
+	<view class="home-swiper-container">
+		<view class="swiper-container darkStyle">
+			<u-swiper :list="list" height="300" border-radius="16" img-mode="scaleToFill" bg-color="var(--page-background-color)"></u-swiper>
+		</view>
+	</view>
+</template>
+
+<script>
+export default {
+	name:"home-swiper",
+	props:{
+		list:{
+			type:Array,
+			default:function(){
+				return []
+			}
+		}
+	},
+	data() {
+		return {
+			swiperList: [],
+		};
+	}
+}
+</script>
+
+<style lang="scss" scoped>
+
+.home-swiper-container {
+    margin: 0 30rpx;
+	/deep/ .u-swiper-wrap uni-swiper {
+	    background-color: var(--page-part-color);
+	    border-bottom-right-radius: 16rpx;
+	    border-bottom-left-radius: 16rpx;
+		overflow: hidden;
+	}
+	/deep/ .u-swiper-indicator {
+	    position: relative;
+	    bottom: unset!important;
+	    margin-top: 22rpx;
+		
+		.u-indicator-item-round {
+		    width: 40rpx;
+		    height: 4rpx;
+		    border-radius: 0;
+		    background-color: rgba(41,198,157,.5);
+		}
+		.u-indicator-item-round.u-indicator-item-round-active {
+		    background-color: #FFC107;
+		}
+	}
+}
+</style>

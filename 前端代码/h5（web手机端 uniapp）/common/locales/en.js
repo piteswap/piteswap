@@ -1,0 +1,590 @@
+export default {
+	tabbar: {
+		shouye: 'Home',
+		jiaoyi: 'Trade',
+		qiquan: 'Option',
+		xintuo: 'Trust',
+		zichan: 'Assets'
+	},
+	common: {
+		exit_sure: 'Press again to exit the application',
+		md_title: 'Notice',
+		md_close: 'Close',
+		md_cancel: 'Cancel',
+		md_confirm: 'Confirm',
+		md_confirm1: 'Confirm',
+		ac_success: 'Operation succeeded',
+		nodata: 'No data',
+		loadmore: 'Click load more',
+		loading: 'Loading...',
+		nomore: 'No more',
+		ssgjz: 'You can enter name keywords',
+		search: 'Search'
+	},
+	leftMenu: {
+		dianjidenglu: 'Login',
+		huanyinlaidao: 'Welcome to ',
+		hello: 'Hello',
+		chongbi: 'Deposit',
+		tibi: 'Withdraw',
+		tuiguang: 'Referral',
+		shenfenrenzheng: 'KYC Verification',
+		anquanzhongxin: 'Security Center',
+		tibidizhi: 'Withdraw Address',
+		lianxiwomen: 'Contact us',
+		bangzhu: 'Help Center',
+		jijiafangshi: 'Valuation Method',
+		shezhi: 'Settings',
+		fuzhichenggong: 'Successfully copied',
+		ctjl: 'Deposit & withdrawal records'
+	},
+	bankbind:{
+		title:'Bind bank card',
+		editbank:'Add bank card',
+		btnqueding:'save',
+		name:'Name',
+		namets:'Please type in your name',
+		bknumber:'Bank card number',
+		bknumberts:'Please enter bank card number',
+		bkname:'Bank of deposit',
+		bknamets:'Please select the bank of account',
+		bkbranch:'Account opening branch',
+		bkbranchts:'Please enter the account opening branch',
+		addcard:'Add bank card',
+		examine:'Check',
+		submit:'Submit',
+		bkmingchen:'Bank name',
+		bkmingchents:'Please enter bank name',
+		bkaddress:'Bank address',
+		bkaddressts:'Please enter bank address',
+		swiftcode:'Swift Code/Fedwire Code',
+		swiftcodets:'Please enter swift code or Fedwire Code',
+		chikaxingming:'Full Name',
+		chikaxingmingts:'Please enter full name',
+		bkaccount:'International Bank Account Number',
+		bkaccountts:'Please enter an international bank account number',
+		residenceaddress:'Payee full address',
+		residenceaddressts:'Please enter payee full address',
+		postalcode:'Zip Code',
+		postalcodets:'Please enter zip code'
+	},
+	index: {
+		more: 'More',
+		chongzhi: 'Fast recharge',
+		dianjichongzhi: 'Click recharge',
+		kuaishutibi: 'Fast withdrawal',
+		vipchongzhitd: 'VIP Recharge channel',
+		zhinenglicai: 'Smart Finance',
+		fenxiang: 'Publication',
+		bangzhu: 'Chat',
+		zhangfubang: 'Gainers',
+		jiaoyidui: 'Pair',
+		zuixinjia: 'Latest Price',
+		zhangdiefu24: '24H Change',
+		faxing: 'Publication',
+	},
+	reg: {
+		shoujizhuche: 'Phone',
+		youxiangzhuche: 'Email',
+		shoujihao: 'Phone',
+		youxiang: 'Email',
+		yanzhengma: 'Verification code',
+		fasong: 'Send',
+		mima: 'Password',
+		querenmima: 'Confirm password',
+		yaoqingma: 'Invitation code(Optional)',
+		nyty: 'You have agreed to ',
+		yhxy: 'User Agreement',
+		bljwm: ' and learn about our ',
+		ysxy: 'Privacy Agreement',
+		zhuche: 'Sign Up',
+		yyzh: 'Have an account',
+		ljdl: ' Log in',
+		qsrsjh: 'Please enter phone number',
+		qsrzqsjh: 'Please enter the correct phone number',
+		qsryx: 'Please enter email',
+		qsrzqyx: 'Please enter your vaild email',
+		qsryzm: 'Please enter verification code',
+		qsrmm: 'Please enter the password',
+		zxcd6w: 'Minimum password length 6',
+		qsrqrmm: 'Please re-enter the password',
+		lcmmbyz: 'Password twice inconsistent',
+		qgxxy: 'Please read and tick to agree to user agreement'
+	},
+	forget: {
+		sjzh: 'Use Phone',
+		yxzh: 'Use Email',
+		newpwd: 'New password',
+		tijiao: 'Submit',
+		zhmm: 'Retrieve password',
+		zcsjh: 'Registered phone',
+		zcyxh: 'Registered email',
+		xiayibu: 'Next'
+	},
+	login: {
+		qiehuanyuyan: 'Language',
+		shoujidenglu: 'Phone',
+		youxiangdenglu: 'Email',
+		shoujihao: 'Please enter phone number',
+		youxiang: 'please enter email adress',
+		mima: 'Please enter your password',
+		denglu: 'Log In',
+		myzh: 'No account',
+		lijizhuche: 'Sign up',
+		wangjimima: 'Forgot password?',
+		dengluchenggong: 'Sign in successfully'
+	},
+	settings: {
+		language: {
+			title: 'Language settings'
+		},
+		account: {
+			title: 'Account Settings',
+			tuichu: 'Log out',
+			grxxsz: 'Personal settings',
+			nicheng: 'Nickname',
+			zhanghao: 'Account',
+			shoujihao: 'Phone',
+			youxiang: 'Email',
+			tuichuqueren: 'Are you sure you want to log out?'
+		},
+		index: {
+			language: 'Language',
+			guanyu: 'About Us',
+			huanchun: 'Clear cache',
+			banben: 'Version ',
+			clearCacheOk: 'Cache cleaning completed'
+		},
+		security: {
+			aqzx: "Security center",
+			xgdlmm: "Modify login password",
+			xgjymm: "Modify payment password",
+			nopaypwdtips: 'You have not set a transaction password. To ensure the safety of your funds, please set a transaction password immediately!'
+		},
+		changeLoginPassword: {
+			default: ["Change password", "Original password", "New password", "Confirm new password", "Confirm"],
+			placeholder: ["Please enter original password", "Please enter new password", "Please confirm new password"]
+		},
+		changePassword: {
+			toast: ["Successfully modified"],
+			rules: ["Original password is required", "New password is required", "Confirm new password is required",
+				"Two passwords are different"
+			]
+		}
+	},
+	notice: {
+		gonggao: 'Announcement',
+		xiaoxi: 'Message'
+	},
+	trade: {
+		index: {
+			xianhuo: 'SPOT',
+			jydcjl: 'Pair/VOL',
+			shishijiage: 'Last Price',
+			zhangdiefu: 'Change'
+		},
+		kline: {
+			high24: 'Highest 24H',
+			low24: 'Lowest 24H',
+			volume24: 'Vol',
+			jiaoyi: 'Trade',
+			zuixincj: 'Filled',
+			zhibiao: 'Index',
+			time: 'Time',
+			open: 'Open',
+			high: 'High',
+			low: 'Low',
+			close: 'Close',
+			noData: 'No data',
+			time_1week: '1week',
+			time_1mon: '1mon',
+			time_1min: '1 min',
+			time_5min: '5 min',
+			time_30min: '30 min',
+			time_60min: '1 H',
+			time_1day: '1 D',
+			time_fenshi: 'Time',
+			more: 'More',
+			zhutu: 'Main Map',
+			buy: 'BUY',
+			sell: 'SELL',
+			yuebz: 'Balance is less than ',
+			qsrmrsl: 'Please enter purchase quantity',
+			yuebuzhu: 'Insufficient balance',
+			qsrmcsl: 'Please enter the sold quantity',
+			kmyebz: 'Insufficient sellable balance',
+			keyong: 'Available',
+			jiaoyie: 'Volume',
+			buynum: 'Buy amount',
+			sellnum: 'Sell amount',
+			buy1: 'Buy',
+			sell1: 'Sell',
+			orderHistory: 'Order History',
+			refresh: 'Refresh',
+			type: 'Direction',
+			wtjg: 'Price',
+			completed: 'Completed',
+			cancelled: 'Cancelled',
+			waiting: 'Waiting',
+			shuliang: 'Amount',
+			shouxufei: 'Handling fee',
+			fangxiang: 'Direction',
+			price: 'Price',
+			currentPrice: 'Current Price',
+			change: 'Change',
+			option: 'Option',
+			bibi: 'Exchange'
+		}
+	},
+	lever: {
+		index: {
+			heyue: 'Futures',
+			zuoduo: 'Buy Long',
+			zuokong: 'Buy Short',
+			jiage: 'Price',
+			shuliang: 'Quantity',
+			shizhi: 'Market value',
+			baozhengjin: 'Margin',
+			shouxufei: 'Handling fee',
+			yue: 'Balance',
+			xzbs: 'Multiple',
+			shoushu: 'Lot',
+			qxzhsr: 'Please enter',
+			one: '1 Lot',
+			dqwt: 'Market order',
+			history: 'Transaction Record',
+			ssbnxy1: 'No less than 1 lot',
+			bxszzs: 'Must be positive integer',
+			type: 'Type',
+			pingcang: 'Close Out',
+			kcprice: 'Open',
+			xprice: 'Current',
+			yingkui: 'Profits',
+			stoptips: 'Confirm to close the position?',
+			yipingcang: 'Closed',
+			yichedan: 'Cancelled',
+			jiaoyizhong: 'Holding',
+			zhiyinjia: "Stop profit",
+			zhisunjia: "Stop loss",
+			zhisunzhiyin: "Stop loss and profit",
+			weituojiazhi: 'Commission value',
+			zuiyoujiage: 'Best price',
+			qrzhiyingjia: 'Please enter the take profit price',
+			qrzhisunjia: 'Please enter the stop price'
+		}
+	},
+	option: {
+		list: {
+			shuliang: 'Quantity',
+			gmjg: 'Buy Price',
+			dqjg: 'Current Price',
+			leixing: 'Type',
+			jgsj: 'Delivery Time',
+			gmsj: 'Purchase Time',
+			kanzhang: 'Buy Call',
+			kandie: 'Buy Put'
+		},
+		history: {
+			shuliang: 'Quantity',
+			gmjg: 'Buy Price',
+			jgjg: 'Closing Price',
+			leixing: 'Type',
+			yingkui: 'Profit and loss',
+			gmsj: 'Purchase Time',
+			type1: 'Buy Even',
+			type2: 'Buy Call',
+			type3: 'Buy Put'
+		},
+		detail: {
+			kanzhang: 'rise',
+			kandie: 'fall',
+			qiquan: 'Option',
+			ddjg: 'Awaiting',
+			jgls: 'History',
+			qswcsmrz: 'Please complete the KYC Verification',
+			qwc: 'KYC Verification'
+		},
+		popup: {
+			die: "Down",
+			zhang: "Up",
+			gmsl: "Amount",
+			yue: "Balance",
+			yjsy: "Expected",
+			ljgm: "Buy Now",
+			sxf: "Fee: ",
+			placeholder: 'Minimum Purchase is {range}',
+			qxzqqsj: "Please select option time first",
+			sjwk: "Amount is required",
+			sjbnxy: "Amount can not be less than ",
+			title1: "Buy ",
+			title2: " Option",
+			yuebuzhu: 'Insufficient balance',
+			rztx: 'Your account has not been authenticated. Do you want to go to the authentication?'
+		}
+
+	},
+	verification: {
+		sfrz: 'KYC Verification',
+		smrz: 'Real-name Verification',
+		smrzgj: 'Advanced Verification',
+		yrz: 'Verified',
+		shz: 'Under review',
+		wrz: 'Unverified',
+		guojia: 'Country',
+		guojiats: 'Please choose a country or region',
+		xingming: 'Full Name',
+		xingmingts: 'Please enter full name',
+		zjhm: 'ID number',
+		zjhmts: 'Please enter ID number',
+		lxdz: 'Contact address',
+		lxdzts: 'Please enter contact address',
+		submit: 'Submit',
+		zjzm: 'Please upload a photo of the front of your ID',
+		zjfm: 'Please upload a photo of the back side of your ID',
+		sczj: 'Please upload a photo with your ID in hand',
+		xztp: 'Select picture',
+		scsb: 'Upload failed',
+		qwcjcrz: 'Please complete KYC Verification first'
+	},
+	assets: {
+		index: {
+			zzczh: "Total Assets",
+			zczh: "Asset valuations",
+			chongbi: "Deposit",
+			tibi: "Withdraw",
+			huazhuang: "Transfer",
+			ycxebz: "Hide small assets",
+			keyong: "Available",
+			dongjie: "On orders",
+			title: 'Assets',
+			bbac: 'Currency Account',
+			qqac: 'Options Account',
+			hyac: 'Contract Account',
+			xtac: 'Trust Account'
+		},
+		trade: {
+			zhonge: "Total",
+			keyong: "Available",
+			dongjie: "Frozen",
+			zbjl: "Account Change Record",
+			zcxq: "Asset details",
+			chongzhi: "Deposit",
+			tixian: "Withdraw",
+			qiquan: "Option",
+			jiaoyi: "Trade",
+			shuliang: "Number",
+			jilu: "Record",
+			shijian: "Time"
+		},
+		transfer: {
+			zjhz: "Transfer",
+			form: "From",
+			to: "To",
+			hzsl: "Quantity",
+			all: "All",
+			khz: "Available",
+			qdhz: "Confirm",
+			hzbz: "Transfer",
+			tips: "sorry, your balance is running low"
+		},
+		record: {
+			hzjl: 'Transfer Record',
+			shuliang: 'Amount',
+			leixing: 'Type',
+			shijian: 'Date',
+			labels: 'to'
+		},
+		allRecord: {
+			title: 'Records',
+			label: ['Deposit records', 'Withdrawal records'],
+			status: ['Passed', 'Rejected', 'Processing'],
+			default: ['Deposit', 'Withdrawal', 'Amount', 'Fee', 'Actually obtained', 'Time']
+		},
+		deposit: {
+			yhkcz:"Debit card",
+			bkname:'Bank name',
+			bkcardnumer:'Bank card number',
+			cardname:"Name",
+			zzjiner:"transfer amount",
+			zzjinerts:'Please enter the bank transfer amount',
+			qsczztp:"Please upload a picture of the transfer voucher",
+			bkcopy:"Copy",
+			tips: '<div><p>In order to protect the safety of your funds and property, please confirm the deposit address every time you deposit to avoid unnecessary losses</p><br></div>',
+			chongbi: "Deposit",
+			ltype: "Select type",
+			hqcbdz: "Scan QR code above to get address",
+			save: "Save to local",
+			cbdz: "Deposit Address",
+			fzcg: "Successfully copied",
+			zysx: "Notes: ",
+			xztp: "Select Picture",
+			cbsl: "Amount",
+			sctp: "Upload recharge picture",
+			qsrcbsl: "Please input the amount of charged currency",
+			qsccztp: "Please upload recharge picture",
+			zxczje: "Minimal deposit {coin}",
+			tjcg: "Submitted successfully",
+			tjsb: "Failed to submit",
+			fzsb: "Copy failed, please copy manually",
+			scsb: "Upload failed",
+			tpbccg: 'Picture saved successfully',
+			tpbcsb: 'Failed to save picture',
+			noticecontent: '<div><p>Be sure to confirm whether the name of the coin deposit chain is selected correctly.</p><p>Please do not deposit any non-{coin} assets to the above address, otherwise the assets will not be retrieved.</p><p>If you have completed the deposit, please click the "Deposit" button on the page to submit the information, otherwise the deposit cannot be posted.</p><p>{coin} deposit only supports the simple send method. Deposits using other methods (send all) cannot be posted temporarily. Please understand.</p><p>After you recharge to the above address, you need the confirmation of the entire network node before it can be credited.</p><p>Be sure to confirm the security of your computer and browser to prevent information from being tampered with or leaked.</p></div>',
+			copy: 'Copy address'
+		},
+		withdraw: {
+			default: ["Withdraw", "Notes:", "Set Address"],
+			toasts: ["please set withdraw address first", "Please enter amount", "Please enter fund password",
+				"Submitted successfully"
+			],
+			labels: ["Chain Name", "Withdraw Address", "Amount", "Balance", "ALL", "Note(optional)", "Fund Password",
+				"Handling fee", "Receive Amount"
+			],
+			placeholder: ["Enter or paste the address", "Please enter remark", "Enter fund Password"],
+			tips: ["Code scanning is only supported in app"],
+			modal: ["Please set the withdraw address first"],
+			noticecontent: '<div><p>1: You can submit 3 withdrawal applications per day (minimum withdrawal {min_coin}).<br>2: After submitting the withdrawal application, the funds are frozen because the withdrawal is in progress, and the funds are temporarily managed by the system and cannot be freely controlled by you. It does not mean that you have lost the asset or the asset is abnormal. Please wait patiently for the approval.<br>3: The account will be received within 12 hours after submitting the withdrawal application. If the account does not arrive after the estimated time of withdrawal, please consult the online customer service.<br></p></div>'
+		},
+		addWithdrawAddress: {
+			default: ["Address", "There is no content", "Add new address"],
+			tips: ["You haven't added an address yet",
+				"�� Address book can manage your common address, you can save multiple checks while withdrawing on existed address.",
+				"�� API has supported automatic withdrawal, please use existing address on the address book."
+			]
+		},
+		withdrawCreate: {
+			default: ["Create {coin} Address", "Save", "Prompt", "Go Setting"],
+			labels: ["Select type", "Address", "Send"],
+			placeholder: ["Enter or paste the address", "6 digit financial password", "Verification code"],
+			modal: ["For your assets security, please set the fund password first!"],
+			rules: ["Address is required", "Password is required", "Finacial password is 6 digit",
+				"Verification code is required"
+			],
+			toast: ["Successfully sent", "Successfully bind", "Binding failed"],
+			deltips: "Are you sure you want to delete the current address?"
+		}
+	},
+	user: {
+		address: {
+			search: "Please select currency",
+			title: "Address Management",
+			transaction: {
+				title: "transaction security verification"
+			},
+			create: {
+				title: "Create {coin} Address"
+			}
+		}
+	},
+	template: {
+		fundFinancial: {
+			default: ["Trust", "In progress", "Deposit money to earn interest", "30-day maximum expected return",
+				"Create a New Blockchain Asset Appreciation Model to Make Asset Appreciation Easier", "Coming soon",
+				"Mining machine leasing", "The highest profit for first-level users", "Make Mining Easier",
+				"Intelligent robot",
+				"One stop asset management quantification platform, quantitative transaction and sitting income",
+				"Historical return test"
+			],
+			detail: ["Fnds in  custody", "Trust Treasure", "Orders", "Rules", "Estimated Profits", "Total Profits",
+				"Orders in custody", "Featured Products"
+			],
+			labels: ["Financing for {days} days", "Minimum limit", "Total yield", "Cycle", "Buy", "{days} days"],
+			wait: "To be opened"
+		},
+		financialDetail: {
+			default: ["Buy", "Rules", "Financing for {day} days", "{day} day cycle", "Pecently(Daily revenue)",
+				"Payout Period", "Custody Amount", "Daily", "Due to return",
+				"the Terms of Platform Financial Management Service Agreement"
+			],
+			labels: ["Estimated Earnings", "Balance", "Custody amount:", "All", "Buy", "Minimum amount", "I got it"],
+			placeholder: ["Please enter the amount"],
+			tips: ["I have read and agree to ", "You have not agreed to ", "Amount can not be empty",
+				"Minimum escrow amount {coin}"
+			]
+		},
+		financialHosting: {
+			default: ["My Hosting", "Purchased Amount", "Daily Yield", "Days Remain", "Cycle", "Penalty", "Redeem",
+				"Purchase Time", "Complete Tme", "Current earnings"
+			],
+			tabbar: ["Hosting", "Completed", "Redeemed"],
+			tips: [
+				"If you redeem early, you will be required to pay a penalty, and a penalty of 1.5 times the daily interest will be deducted from the principal. The penalty is approximately {amount}{currencyName}. Confirm the redemption?"]
+		},
+		financialRule: {
+			content: ["Nonstop profit",
+				"Brick-moving is through the transfer of USDT to the platform, and the professional team of the platform carries out the arbitrage of the brick-moving. Participants can obtain the platform��s brick-moving income during the period of capital slander."
+			],
+			highlight: ["Product Highlights", "Save as you go", "Dividend Payout Period", "Post daily",
+				"Current Interest", "100% funds security guarantee", "unlimited holiday income",
+				"Interest starts on the next day of successful deposit"
+			],
+			count: ["Profit Calculations",
+				" After deposit and transfer USDT to the platform funding accounts, the daily income will be calculated. If the member deposits 10000 USDT on the platform and chooses the 15-day period, and the daily income is 0.4% of the wealth management product, then daily income is as follows: 10000 USDT * 0.4%= 40 USDT. That is: You can get 600 USDT income after 15 days, and the income will be issued daily, and the principal will be refunded as well. After the expiration date, it will be automatically returned to you."
+			],
+			about: ["Penalty Fee",
+				"If you want to transfer out the unexpired principal of your account, you will incur a penalty. The penalty = settlement ratio * remaining days * investment amount. Example: The product��s default penalty settlement ratio is 0.4%, the remaining 3 days are due, and the investment amount is 1000, then the default penalty = 0.4%*3*1000=12 USDT, the actual principal refund is 1000 USDT-12 USDT=988 USDT"
+			],
+			default: ["Buy", "Rules"]
+		}
+	},
+	promotion: {
+		default: ["Referral Rules", "partner", "VIP", "Ratio", "My Invitation Code", "Share exclusive poster",
+			"Copy Referral Link", "Referral", "Rank", "Promotions", "Bonuses", "{appName} PARTNER PROGRAM",
+			"Authorization Code", "My code"
+		],
+		labels: ["Total number", "Total rewards", "Unactived", "Save locally", "Cancel", "activated"],
+		rank: ["Leaderboard", "Rank", "Promotes", "Rebate conversion"],
+		i18n: ["Win", "Recharge Rebate"],
+		tips: ["Successfully copied", "Pull up to load more", "Loading", "No more"],
+		title: "Total ranking (TOP10)"
+	},
+	helpCenter: {
+		title: "Chat",
+		labels: ["Advice feedback", "Chat", "FAQ", "More", "FAQ list"]
+	},
+	component: {
+		upload_outmax: 'Out of allowable file size',
+		upload_reupload: 'Re-upload',
+		upload_fail: 'Uploading failed, please try again',
+		upload_confirm: 'Are you sure to delete this item?',
+		upload_terminateremoval: 'Removing is terminated',
+		upload_removedsuccessfully: 'Removing succeeded',
+		upload_previewfail: 'Picture preview failed',
+		upload_retry: 'Click to Retry',
+	},
+	currency: {
+		subscription: 'New currency subscription',
+		mysubscription: 'My subscription',
+		duringsubscription: 'During subscription ',
+		launched: 'Redemption',
+		soldout: 'Sold out',
+		lockup_period: 'Lock-up period',
+		issue_price: 'Issue price',
+		subscription_currencies: 'Subscription currencies',
+		subscription_starttime: 'Start time of subscription',
+		subscription_closingtime: 'Closing time for subscription',
+		estimated_launchtime: 'Estimated launch time',
+		introduction: 'Introduction',
+		please_enter_the_amount: 'Please enter the amount',
+		immediate_subscription: 'Immediate subscription',
+		recharge: 'You hav insufficient balance, so please recharge.',
+		subscription_successful: 'Your subscription is successful.',
+		new_currencies: 'New currencies',
+		confirm: 'Confirm',
+		currency_launched: 'After the new currency is issued, the subscription customers can redeem the new currency after the new currency is launched.',
+		new_currency: 'New currency',
+		subscription_amount: 'Subscription amount',
+		subscription_time: 'Subscription time',
+		expected_gross_return: 'Expected gross return',
+		payment_currency: 'Payment currency',
+		are_purchasing: 'Are purchasing',
+		accumulated_return: 'Accumulated return',
+		the_total_return_rate: 'The total return rate',
+		completion_time: 'Completion time',
+		total_return: 'Total return',
+		currency: 'Currency',
+		day: 'day',
+		under_review: 'under review',
+		passed: 'passed',
+	}
+}

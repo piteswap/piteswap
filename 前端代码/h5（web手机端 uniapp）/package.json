@@ -1,0 +1,23 @@
+{
+  "name": "Exchange",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@hyoga/uni-socket.io": "^2.0.3",
+    "lightweight-charts": "^3.6.1",
+    "moment": "^2.29.1",
+    "monent": "^0.0.2-security",
+    "mpvue-echarts": "^0.3.2",
+    "tki-qrcode": "^0.1.6",
+    "uview-ui": "^1.8.4",
+    "vue-i18n": "^8.25.0",
+    "vue-socket.io": "^3.0.10"
+  }
+}

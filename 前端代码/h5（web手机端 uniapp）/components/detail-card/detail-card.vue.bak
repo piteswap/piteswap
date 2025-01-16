@@ -1,0 +1,115 @@
+<template>
+	<view class="detail-card-contaner">
+		<view class="card-wrap darkStyle">
+			<view class="title-wrap">
+				<ex-title :title="$t('assets.trade.zcxq')"></ex-title>
+			</view>
+			<view class="currency">{{currency}}</view>
+			<view class="card-content">
+				<view class="item">
+					<view class="label">{{$t('assets.trade.zhonge')}}({{currency}})</view>
+					<view class="value">{{total}}</view>
+				</view>
+				<view class="item">
+					<view class="label">{{$t('assets.trade.keyong')}}({{currency}})</view>
+					<view class="value">{{balance}}</view>
+				</view>
+				<view class="item">
+					<view class="label">{{$t('assets.trade.dongjie')}}({{currency}})</view>
+					<view class="value">{{lock_balance}}</view>
+				</view>
+			</view>
+		</view>
+	</view>
+</template>
+
+<script>
+export default {
+	name:"detail-card",
+	props: {
+		currency: {
+			type: String,
+			default: "--"
+		},
+		total: {
+			type: Number | String,
+			default: "--"
+		},
+		balance: {
+			type: Number | String,
+			default: "--"
+		},
+		lock_balance: {
+			type: Number | String,
+			default: "--"
+		}
+	},
+	data: function() {
+		return {}
+	},
+	mounted: function() {},
+	methods: {}
+}
+</script>
+
+<style lang="scss" scoped>
+.detail-card-contaner{
+	.card-wrap {
+		height: 320rpx;
+		margin: 0 30rpx;
+		background: url('@/static/images/common/ic_asset_top_bg.png') no-repeat;
+		background-size: 100% 100%;
+		border-radius: 24rpx;
+		padding: 30rpx;
+		color: #fff;
+		&.darkStyle {
+			background: url('@/static/images/common/flow-detail-bg-dark.png') no-repeat;
+			background-size: 100% 100%;
+			color: var(--text-color);
+			.title-wrap {
+				padding-bottom: 30rpx;
+				.ex_title_container .title {
+					color: #2de2b4
+				}
+			}
+		}
+		.title-wrap {
+			padding-bottom: 30rpx;
+			.ex_title_container .title {
+				color: #fff
+			}
+		}
+		.currency {
+			text-align: center;
+			font-size: 30rpx;
+			font-weight: 700
+		}
+		.card-content {
+			margin-top: 58rpx;
+			display: flex;
+			justify-content: space-between;
+			.item {
+				flex: 1 0 33.3%;
+				overflow: hidden;
+				text-align: center;
+				.label {
+					margin-bottom: 24rpx
+				}
+				&:last-child{
+					.label,
+					.value {
+						text-align: right
+					}
+				}
+				&:first-child{
+					.label,
+					.value {
+						text-align: left
+					}
+				}
+			}
+		}
+	}
+}
+
+</style>

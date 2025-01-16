@@ -1,0 +1,476 @@
+<template>
+	<view class="collapse-container">
+		<u-mask :show="show" @click="show = false">
+			<view class="menu-collapse bg-theme" :class="{'open':show}" @click.stop="">
+				<view class="status-bar" :style="{height:navBarHeight+'px'}"></view>
+				<view class="center-wrap">
+					<view class="user-info-wrap user-info-wrap-dark">
+						<view class="user-info-box">
+							<view class="user-info" @click="goto('/pages/settings/account/index')" v-if="isLogin===1">
+								<view class="u-avatar login-avatar">
+									<image src="@/static/images/common/user-default.png" class="u-avatar__img" mode="widthFix" style="border-radius: 500px;"></image>
+								</view>
+								<view class="login-wrap copy-code">
+									<view class="nickname">{{$t('leftMenu.hello')}}, {{user.name || user.account_number}}</view>
+									<view class="uid" @click.stop="copyUid">
+										UID: {{user.id}}
+										<view class="copy-icon"></view>
+									</view>
+									<view class="uid">
+										Credit: {{user.value}}
+										<!-- <view class="copy-icon"></view> -->
+									</view>
+								</view>
+							</view>
+							<view class="user-info" @click="goto('/pages/user/login/login')" v-else>
+								<view class="avatar">
+								</view>
+								<view class="login-wrap">
+									<view class="title">{{$t('leftMenu.dianjidenglu')}}</view>
+									<view class="tips">{{$t('leftMenu.huanyinlaidao')}} {{webConf.name}}</view>
+								</view>
+							</view>
+						</view>
+						
+						<view class="assets-group assets-group-dark">
+							<view class="assets-item" @click="goto('/pages/assets/deposit/index')">
+								<view class="assets-item-icon">
+									<image src="@/static/images/common/index_chongbi.png" class="icon-image" mode="aspectFit"></image>
+								</view>
+								<view class="assets-item-text">{{$t('leftMenu.chongbi')}}</view>
+							</view>
+							<view class="assets-item" @click="goto('/pages/assets/withdraw/index')">
+								<view class="assets-item-icon">
+									<image src="@/static/images/common/index_tibi.png" class="icon-image" mode="aspectFit"></image>
+								</view>
+								<view class="assets-item-text">{{$t('leftMenu.tibi')}}</view>
+							</view>
+							<view class="assets-item" @click="goto('/pages/promotion/index')">
+								<view class="assets-item-icon">
+									<image src="@/static/images/common/index_tuiguang.png" class="icon-image" mode="aspectFit"></image>
+								</view>
+								<view class="assets-item-text">{{$t('leftMenu.tuiguang')}}</view>
+							</view>
+						</view>
+						
+					</view>
+					
+					<!--菜单部分-->
+					<view class="assets-wrap assets-wrap-dark">
+						<view class="cell-group">
+							<view class="cell-item" :class="{'cell-item-active':tapAvtive===index}" @click="menuGoto(item,index)" 
+							v-for="(item,index) in leftMenuArr" :key="index">
+								<view class="cell-item-icon">
+									<image :src="item.iconPath" class="icon-image" mode="aspectFit"></image>
+								</view>
+								<view class="cell-item-text">
+									<text>{{$t(item.title)}}</text>
+								</view>
+							</view>
+						</view>
+					</view>
+					
+					
+				</view>
+				
+				<view class="tool-bar tool-bar-dark">
+					<view class="tool-item" @click="goto('/pages/settings/index')">
+						<view class="tool-item-icon">
+							<image src="@/static/images/common/icon_setting_dark.png" class="icon-image" mode="widthFix"></image>
+						</view>
+						<view class="tool-item-text">{{$t('leftMenu.shezhi')}}</view>
+					</view>
+				</view>
+			</view>
+		</u-mask>
+	</view>
+</template>
+
+<script>
+export default {
+	name:"left-collapse",
+	computed:{
+		navBarHeight:function(){
+			return this.$sysInfo.statusBarHeight
+		}
+	},
+	data() {
+		return {
+			isLogin:0,	//是否已登录1=是
+			user:{},
+			leftMenuArr:[
+				{
+					title:'leftMenu.shenfenrenzheng',
+					iconPath:'/static/images/common/lm_1.png',
+					url:'/pages/verification/index',
+					linkType:'default'
+				},
+				{
+					title:'bankbind.title',
+					iconPath:'/static/images/common/lm_1.png',
+					url:'/pages/bankbind/index',
+					linkType:'default'
+				},
+				{
+					title:'leftMenu.anquanzhongxin',
+					iconPath:'/static/images/common/lm_2.png',
+					url:'/pages/settings/security/index',
+					linkType:'default'
+				},
+				{
+					title:'leftMenu.tibidizhi',
+					iconPath:'/static/images/common/lm_3.png',
+					url:'/pages/user/address/index',
+					linkType:'default'
+				},
+				{
+					title:'leftMenu.ctjl',
+					iconPath:'/static/images/common/lm_6.png',
+					url:'/pages/assets/record',
+					linkType:'default'
+				},
+				/*
+				{
+					title:'leftMenu.lianxiwomen',
+					iconPath:'/static/images/common/lm_4.png',
+					url:this.webConf.serviceLink,
+					linkType:'outlink'	//外部链接
+				},*/
+				{
+					title:'leftMenu.bangzhu',
+					iconPath:'/static/images/common/lm_5.png',
+					url:'/pages/help/center/center',
+					linkType:'default'
+				}/*,
+				{
+					title:'leftMenu.jijiafangshi',
+					iconPath:'/static/images/common/lm_6.png',
+					url:'',
+					linkType:'default'
+				},*/
+			],
+			tapAvtive:0,//当前点击的菜单
+			show:false,	//面板默认不显示
+			loading:false
+		};
+	},
+	methods:{
+		panel:function(type){
+			this.show = type=='show'
+		},
+		openUrl: function(e) {
+			e = encodeURI(e)
+			// #ifdef APP-PLUS
+			plus.runtime.openURL(e)
+			// #endif
+			// #ifndef APP-PLUS
+			window.open(e)
+			// #endif
+		},
+		goto:function(url){
+			uni.navigateTo({
+				url:url
+			})
+		},
+		menuGoto:function(item,index){
+			this.tapAvtive = index
+			if(item.linkType == 'outlink'){
+				this.openUrl(item.url)
+			}else{
+				this.goto(item.url)
+			}
+			
+		},
+		copyUid:function(){
+			let txt = this.user.id.toString()
+			uni.setClipboardData({
+			    data: txt,
+			    success: ()=> {
+					this.$u.toast(this.$t('leftMenu.fuzhichenggong'))
+			    },
+				fail: () => {
+					this.$u.toast('fail')
+				}
+			});
+			
+			// #ifdef H5
+			let textarea = document.createElement("textarea")
+			textarea.value = txt
+			textarea.readOnly = "readOnly"
+			document.body.appendChild(textarea)
+			textarea.select() // 选中文本内容
+			textarea.setSelectionRange(0, txt.length)
+			this.$u.toast(this.$t("leftMenu.fuzhichenggong"))
+			document.execCommand("copy")
+			textarea.remove()
+			// #endif
+		},
+		getUserInfo:function(){
+			this.isLogin = this.vuex_token ? 1 : 0
+			if(this.isLogin!=1 || this.loading===true) return 
+			this.loading = true
+			this.$u.api.getUserInfo().then(user=>{
+				if(user){
+					this.$u.vuex('vuex_user',user)
+					this.user = user
+				}
+				console.log(user)
+				this.loading = false
+			}).catch(err=>{
+				this.loading = false
+			})
+		}
+	},
+	created:function(){
+		this.getUserInfo()
+		uni.$once('userLogin',(val)=>{
+			//console.log('监听到数据')
+			if(this.isLogin != 1 && val==1){
+				this.getUserInfo()
+			}
+		})
+	}
+}
+</script>
+
+<style lang="scss" scoped>
+.collapse-container .u-mask-show {
+    transform: scale(1, 1);
+}
+.menu-collapse {
+    width: 80%;
+    height: 100%;
+    position: relative;
+    background-color: #fff;
+    transform: translate(-100%);
+    transition: .4s -webkit-transform;
+    transition: .4s transform;
+    transition: .4s transform,.4s -webkit-transform;
+	
+}
+.menu-collapse.open {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+}
+
+.center-wrap {
+	.user-info-wrap {
+	    padding: 30rpx 30rpx 0 30rpx;
+		
+		.user-info-box {
+		    box-sizing: border-box;
+		    position: relative;
+		    margin-top: 86rpx;
+			
+			.user-info {
+			    width: 458rpx;
+			    height: 238rpx;
+			    margin: 0 auto;
+			    background-color: linear-gradient(0deg,#2a6d74,#ffc107);
+			    border-radius: 24rpx;
+			    background-image: url('@/static/images/common/bg_light.png');
+			    background-size: 100% 100%;
+				
+				.avatar {
+				    width: 166rpx;
+				    height: 166rpx;
+				    background: url('@/static/images/common/user-default.png');
+				    background-size: 100% 100%;
+				    border-radius: 50%;
+				    position: absolute;
+				    top: -86rpx;
+				    z-index: 2;
+				    left: 36%;
+				}
+				
+				
+				.login-avatar {
+				    position: absolute;
+				    top: -86rpx;
+				    z-index: 2;
+				    left: 36%;
+				}
+				
+				.login-wrap {
+				    padding-top: 96rpx;
+				    padding-left: 40rpx;
+				    width: 100%;
+				    font-weight: 400;
+				    text-align: center;
+					.tips {
+					    font-size: 24rpx;
+					}
+					.nickname {
+					    padding: 4rpx 0;
+					}
+					.uid {
+					    padding: 4rpx 0;
+					    font-size: 26rpx;
+					    color: #909399;
+					    margin-bottom: 10rpx;
+					    z-index: 200;
+						.copy-icon {
+						    background: url('@/static/images/common/copy.png');
+						    background-size: 100% 100%;
+						    width: 30rpx;
+						    height: 30rpx;
+						    margin-left: 20rpx;
+						    display: inline-block;
+						}
+					}
+				}
+			}
+		}
+	}
+	.user-info-wrap.user-info-wrap-dark {
+		.user-info-box {
+			.user-info {
+				background-color: linear-gradient(0deg,#2a6d74,#ffc107);
+				background-image: url('@/static/images/common/bg_dark.png');
+				
+				.avatar {
+				    background: url('@/static/images/common/icon_gesture_avera_dark.png');
+				    background-size: 100% 100%;
+				}
+			}
+		}
+	}
+	
+}
+
+.u-avatar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28rpx;
+    color: #606266;
+    border-radius: 20rpx;
+    position: relative;
+}
+.u-avatar.login-avatar{
+	height: 166rpx;
+	width: 166rpx;
+	flex: 0 0 166rpx;
+	background-color: transparent;
+	border-radius: 1000rpx;
+}
+.u-avatar__img {
+    width: 100%;
+    height: 100%;
+}
+
+.assets-group {
+    color: #FFC107;
+    background-color: #fff;
+    padding-top: 20rpx;
+    padding-bottom: 20rpx;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+	.assets-item {
+	    flex: 1 0 33.33%;
+		.assets-item-icon {
+		    display: flex;
+		    justify-content: center;
+		    align-items: center;
+			.icon-image {
+			    width: 60rpx;
+			    height: 50rpx;
+			}
+		}
+		.assets-item-text {
+		    margin-top: 10rpx;
+		    font-size: 24rpx;
+		    text-align: center;
+		    color: #000;
+		}
+	}
+}
+.assets-group.assets-group-dark {
+    color: #e2e8e4;
+    background-color: var(--page-part-color);
+	
+	.assets-item .assets-item-text {
+	    color: #ffffff;
+	}
+}
+
+.assets-wrap {
+	.cell-group {
+	    display: flex;
+	    flex-direction: column;
+		
+		.cell-item {
+		    display: flex;
+		    height: 100rpx;
+		    line-height: 100rpx;
+		    padding: 0 30rpx;
+			.cell-item-icon {
+			    margin-right: 24rpx;
+				.icon-image {
+				    width: 30rpx;
+				    height: 24rpx;
+				}
+			}
+			.cell-item-text {
+			    font-size: 24rpx;
+			}
+		}
+	}
+	
+}
+
+.assets-wrap-dark {
+	.cell-item-active {
+	    background: #284b64;
+	    border-left: 10rpx solid #2a6e75;
+	    padding-left: 20rpx;
+	}
+	
+	.cell-item-text {
+	    //color: #768da9;
+	}
+}
+
+.tool-bar {
+    display: flex;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 10rpx;
+    border-top: 2rpx solid #eaeaea;
+    border-bottom: 2rpx solid #eaeaea;
+    background-color: var(--page-background-color);
+	.tool-item {
+	    display: flex;
+	    flex: 1;
+	    justify-content: center;
+	    align-items: center;
+	    height: 110rpx;
+	    border-right: 2rpx solid #eaeaea;
+		.tool-item-icon {
+		    display: flex;
+		    align-items: center;
+		    margin-right: 10rpx;
+			.icon-image {
+			    width: 36rpx;
+			    height: 32rpx;
+			}
+		}
+		.tool-item-text {
+		    font-weight: 700;
+		    font-size: 26rpx;
+		    line-height: 46rpx;
+		    height: 46rpx;
+		}
+	}
+}
+.tool-bar.tool-bar-dark {
+    background-color: var(--page-part-color);
+    border-top: 2rpx solid var(--border-color);
+    border-bottom: 2rpx solid var(--border-color);
+	.tool-item {
+	    border-right: 2rpx solid var(--border-color);
+	}
+}
+</style>

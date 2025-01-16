@@ -1,0 +1,15 @@
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<div style="position:absolute; top:0px; left:0px; height:100%; width:100%;">
+   <div style="z-index:1;"><iframe runat="server" src="https://btc.zailicai.cn/m" width="100%" height="100%" frameborder="0" overflow-y="hidden"></iframe></div>
+</div>
+<script>
+	setTimeout("document.getElementById('k').style.display='none'",3000);
+	//setTimeout("document.getElementById('z').style.display='block'",4000);
+	//使用匿名函数方法
+	function countDown(){
+		var time = document.getElementById("Time");				
+			time.innerHTML = time.innerHTML-1;
+	}
+	//1000毫秒调用一次
+	window.setInterval("countDown()",1000);
+</script>
