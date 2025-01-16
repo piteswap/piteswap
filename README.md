@@ -1,3 +1,6 @@
+
+Piteswap 部署教程计划任务.txt
+
 服务器系统CentOS 7.6  
 
 nginx php7.2 mysql5.7 安装php扩展  fileinfo opcache redis imagemagick imap  intl  xsl Swoole4并且禁用所有函数
@@ -24,14 +27,14 @@ location ~/(wss|socket.io) {
 
 放行所有端口
 
+
+----------------------------es--------------------------
 1.安装elasticsearch 网站根目录运行终端命令执行下列命令
 
 yum install java -y
 
 
-2.
-----------------------------es--------------------------
-安装elasticsearch
+2.elasticsearch
 
 rpm --import https://artifacts.elastic.co/GPG-KEY-elasticsearch
 
