@@ -7,8 +7,8 @@ username: bygntte2
 password: fedc9e2d
 --------------------------
 数据库信息
-数据库名：pite
-数据库用户名：pite
+数据库名：pitedex
+数据库用户名：pitedex
 密码：asd5228085
 --------------------------
 服务器信息
