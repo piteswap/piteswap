@@ -32,23 +32,36 @@ nginx php7.2 mysql5.7 安装php扩展  fileinfo opcache redis imagemagick imap  
 
 设置网站运行目录public   伪静态 laravel5
 
+
+--------------------------
 nginx站点配置反向代理
 
-location ~/(wss|socket.io) {
-     # 此处改为 socket.io 后端的 ip 和端⼝即可
-     proxy_pass http://127.0.0.1:2000;
-     proxy_set_header Upgrade $http_upgrade;
-     proxy_set_header Connection "upgrade";
-     proxy_http_version 1.1;
-     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-     proxy_set_header Host $host;
-}
 
+location /socket.io/ {
+    proxy_pass https://127.0.0.1:2000;
+    proxy_http_version 1.1;
+    proxy_set_header Upgrade $http_upgrade;
+    proxy_set_header Connection "upgrade";
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header Host $http_host;
+    
+    # SSL 配置
+    proxy_ssl_certificate /www/server/panel/vhost/cert/pitedex.com/fullchain.pem;
+    proxy_ssl_certificate_key /www/server/panel/vhost/cert/pitedex.com/privkey.pem;
+    proxy_ssl_verify off;
+    
+    # 超时设置
+    proxy_read_timeout 60s;
+    proxy_connect_timeout 60s;
+    proxy_send_timeout 60s;
+}
+---------------------
 
 放行所有端口
 
 
-----------------------------es--------------------------
+----------------------es--------------------------
 1.安装elasticsearch 网站根目录运行终端命令执行下列命令
 
 yum install java -y
